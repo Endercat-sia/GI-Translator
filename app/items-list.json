@@ -1,0 +1,33 @@
+[
+    //Below Are Test Items
+	{
+		"id": 999999901,
+		"name": "Red T-Shirt",
+		"description": "A comfortable red t-shirt made from 100% cotton.",
+		"tags": ["clothing", "red", "cotton", "shirt"]
+	},
+	{
+		"id": 999999902,
+		"name": "Blue Jeans",
+		"description": "Classic blue jeans that fit well and look great.",
+		"tags": ["clothing", "blue", "jeans", "bottom"]
+	},
+	{
+		"id": 999999903,
+		"name": "Green Hoodie",
+		"description": "Stay warm and stylish in this green hoodie.",
+		"tags": ["clothing", "green", "hoodie"]
+	},
+	{
+		"id": 999999904,
+		"name": "Running Shoes",
+		"description": "High-quality running shoes that provide excellent support and comfort.",
+		"tags": ["shoes", "running", "athletic"]
+	},
+	{
+		"id": 999999905,
+		"name": "Leather Wallet",
+		"description": "A sleek leather wallet that holds all your essentials.",
+		"tags": ["accessories", "wallet", "leather"]
+	}
+]
