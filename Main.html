@@ -1,0 +1,55 @@
+//Made With ChatGPT
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search Results</title>
+</head>
+<body>
+	<h1>Search Items</h1>
+	<form>
+		<label for="search">Search:</label>
+		<input type="text" id="search" name="search">
+		<button type="submit">Search</button>
+	</form>
+	<br>
+	<ul id="results"></ul>
+	
+	<script>
+		// Sample data for items
+		const items = [
+			{ id: 1, name: "Item 1", description: "This is the first item" },
+			{ id: 2, name: "Item 2", description: "This is the second item" },
+			{ id: 3, name: "Item 3", description: "This is the third item" },
+			{ id: 4, name: "Item 4", description: "This is the fourth item" },
+			{ id: 5, name: "Item 5", description: "This is the fifth item" }
+		];
+
+		// Function to search for items
+		function searchItems(query) {
+			// Clear previous search results
+			document.getElementById("results").innerHTML = "";
+
+			// Filter items based on search query
+			const filteredItems = items.filter(item => item.name.toLowerCase().includes(query.toLowerCase()) || item.description.toLowerCase().includes(query.toLowerCase()));
+
+			// Display search results
+			filteredItems.forEach(item => {
+				const listItem = document.createElement("li");
+				const link = document.createElement("a");
+				link.href = `item${item.id}.html`;
+				link.target = "_blank";
+				link.textContent = item.name;
+				listItem.appendChild(link);
+				document.getElementById("results").appendChild(listItem);
+			});
+		}
+
+		// Event listener for search form submission
+		document.querySelector("form").addEventListener("submit", function(event) {
+			event.preventDefault();
+			const searchQuery = document.getElementById("search").value;
+			searchItems(searchQuery);
+		});
+	</script>
+</body>
+</html>
