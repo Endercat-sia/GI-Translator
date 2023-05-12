@@ -1,4 +1,4 @@
-fetch("items.json")
+fetch("items-list.json")
 			.then(response => {
 				if (!response.ok) {
 					throw new Error(`Failed to load item data (${response.status} ${response.statusText})`);
