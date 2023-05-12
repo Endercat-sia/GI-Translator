@@ -44,3 +44,17 @@ fetch("items-list.json")
 				listItem.textContent = "Failed to load item data.";
 				document.getElementById("results").appendChild(listItem);
 			});
+			$(document).ready(function() {
+				$('form').on('submit', function(e) {
+				  e.preventDefault();
+				  var searchTerm = $('input[name="search"]').val();
+				  $.ajax({
+					url: '/search',
+					type: 'get',
+					data: {search: searchTerm},
+					success: function(data) {
+					  // display search results on the page
+					}
+				  });
+				});
+			  });
