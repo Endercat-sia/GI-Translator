@@ -104,9 +104,9 @@
     border-radius: 5px;
   }
   .search-box {
-    padding: 10px 35px 10px 10px; /* add some padding to make room for the icon */
+    padding: 10px 35px 10px 20px; /* add some padding to make room for the icon */
     background-image: url('https://github.com/Endercat-sia/GI-Translator/raw/main/media/search-icon.svg'); /* set the icon as the background */
     background-repeat: no-repeat;
-    background-position: left center; /* position the icon on the right side of the input */
-    background-size: 20px 20px; /* set the size of the icon */
+    background-position: right center;
+    background-size: 15px 15px; /* set the size of the icon */
   }
