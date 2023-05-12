@@ -6,62 +6,23 @@
 
   <link rel="stylesheet" type="text/css" href="style.css">
 	<script src="script.js"></script>
-  
-  <script>
-    // Get timing information for all resources
-    const resources = window.performance.getEntriesByType('resource');
 
-    // Create a table to display the information
-    const table = document.createElement('table');
-
-    // Create a header row for the table
-    const headerRow = document.createElement('tr');
-    const urlHeader = document.createElement('th');
-    urlHeader.textContent = 'URL';
-    headerRow.appendChild(urlHeader);
-    const startTimeHeader = document.createElement('th');
-    startTimeHeader.textContent = 'Start Time';
-    headerRow.appendChild(startTimeHeader);
-    const endTimeHeader = document.createElement('th');
-    endTimeHeader.textContent = 'End Time';
-    headerRow.appendChild(endTimeHeader);
-    const loadTimeHeader = document.createElement('th');
-    loadTimeHeader.textContent = 'Load Time (ms)';
-    headerRow.appendChild(loadTimeHeader);
-    table.appendChild(headerRow);
-
-    // Loop through the resources and create a row for each one
-    for (let i = 0; i < resources.length; i++) {
-      const resource = resources[i];
-      const row = document.createElement('tr');
-      const urlCell = document.createElement('td');
-      urlCell.textContent = resource.name;
-      row.appendChild(urlCell);
-      const startTimeCell = document.createElement('td');
-      startTimeCell.textContent = resource.startTime;
-      row.appendChild(startTimeCell);
-      const endTimeCell = document.createElement('td');
-      endTimeCell.textContent = resource.responseEnd;
-      row.appendChild(endTimeCell);
-      const loadTimeCell = document.createElement('td');
-      loadTimeCell.textContent = resource.responseEnd - resource.startTime;
-      row.appendChild(loadTimeCell);
-      table.appendChild(row);
-    }
-
-    // Add the table to the page
-    document.body.appendChild(table);
-  </script>
 </head>
 
 <body>
-  <h1>Genshin Impact Items Translator</h1>
+  <h1>Genshin Impact Items Translator  (Beta&Debugging)</h1>
   <form id="searchForm">
     <input type="text" id="search" name="search" placeholder="Enter any language / ID / tag of the item">
     <button type="submit">Search</button>
   </form>
   <br>
   <ul id="results"></ul>
+  <h2>Debugging</h2>
+  <h3>Versions:</h3>
+  <h3>h-0001/c-0001/j-0001/l-0001/f-0001</h3>
+ 
+  </script>
+
 </body>
 
 </html>
